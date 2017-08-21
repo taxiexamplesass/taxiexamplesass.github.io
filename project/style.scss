@@ -53,6 +53,9 @@ $gray-footer: #cccccc;
 		position: absolute;
 		left: 50%;
 		top: 50%;
+		-webkit-transform: translate(-50%,-50%);
+		-o-transform: translate(-50%,-50%);
+		-moz-transform: translate(-50%,-50%);
 		transform: translate(-50%,-50%);
 	}	
 }
@@ -76,16 +79,14 @@ $gray-footer: #cccccc;
 		display: inline-block;
 		margin: 5px 0 9px;
 	}
+	
 }
-
-
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, img, ol, ul, li, fieldset, form, label, article, aside, footer, header, nav, hr {
 	margin: 0;
 	padding: 0;
 	border: 0;
 	outline: 0; 
 }
-
 body { 
 	background-color: #fff;	
 }
@@ -153,7 +154,6 @@ body {
 	}
 }
 /*------------      фОРМА   --------------*/
-
 .bg-form {
 	background: url(images/bg_top12.jpg) no-repeat bottom center;
 	background-size: cover;
@@ -313,7 +313,6 @@ body {
 				text-shadow: 2px 2px 0 darken($yellow, 10%);
 			}
 		}
-		
 	}
 	.cards {
 	margin-top: 25px;
@@ -324,7 +323,6 @@ body {
 		}
 	}
 }
-
 /*------------     /фОРМА   -------------------*/
 
 /*------------     В ЧЕМ НАШИ ПРЕИМУЩЕСТВА   -------------------*/
@@ -359,8 +357,7 @@ body {
 			top: 1px;
 			left: 20px;
 		}
-	}
-	
+	}	
 }
 .heading_dark {
 	@extend %heading;
@@ -381,14 +378,11 @@ body {
 	z-index: 1;
 	bottom: 50px;
 }
-	
-
 .advantages {
 	padding: {
 		top: 80px;
 		bottom: 80px;
 	}
-	
 	.adv-content {
 		margin-top: -50px;
 		.airport {
@@ -413,8 +407,6 @@ body {
 		}
 	}
 }
-
-
 /*------------     /В ЧЕМ НАШИ ПРЕИМУЩЕСТВА   -------------------*/
 
 /*--------------  НАШИ ТАРИФЫ   --------------------*/
@@ -437,7 +429,6 @@ body {
 	}
 	.bg-heading {
 	color: rgba(128,128,128,0.5);
-	
 	}
 	.transports {
 		z-index: 1;
@@ -456,8 +447,7 @@ body {
 				color: $yellow;
 				font-size: 29px;
 				font-weight: bold;
-				margin-bottom: 5px;
-				
+				margin-bottom: 5px;				
 			}
 			.car_brand {
 				color: $text-gray;
@@ -550,6 +540,7 @@ body {
 				text-align: left;
 				top: 198px;
 				left: 595px;
+				width: auto;
 			}
 		}
 	}
@@ -591,7 +582,6 @@ body {
 .button {
 	cursor: pointer;
 }
-	
 /*--------------  НАШИ ТАРИФЫ   --------------------*/
 
 /*-------------------ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ   -----------------*/
@@ -640,10 +630,9 @@ body {
 		}
 	}
 }
-
 /*--------------   /  ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ   -----------------*/
 /*--------------FOOTER---------------*/
-/*.footer_top {
+.footer_top {
 	background: $dark;
 	padding: 43px 0;
 	color: $gray-footer;
@@ -674,7 +663,6 @@ body {
 		text-align: right;
 		
 	}
-
 }
 .footer_bottom {
 	background: $dark-footer;
@@ -682,23 +670,27 @@ body {
 	color: $gray-footer;
 	.social {
 		font-size: 16px;
-	}
-	.social_icons img {
-		
-		margin-right: 7px;
-		
+		padding-top: 5px;
+		span {
+			margin-right: 25px;
+		}
+		img {
+			margin-right: 7px;
+		}
 	}
 	.copyright {
+		padding-top: 5px;
 		font-size: 14px;
 		text-align: right;
 		color: $text-gray;
 	}
-	
-}*/
-
+}
 /*--------------   /   FOOTER   ---------------*/
 
 @media (max-width: 1199px) { 
+	.footer_top {
+		font-size: 16px;
+	}
 	.service_extra {
 		background: none;
 	}
@@ -712,6 +704,28 @@ body {
 		padding: {
 		top: 40px;
 		bottom: 40px;
+		}
+	}
+	.footer_top {
+		.tel_footer {
+			padding-left: 0;
+			h3 {margin-top: 20px;}
+		}
+		.scanner {
+			text-align: center;
+			margin-top: -60px;
+		}
+		.email {
+			padding-left: 0;
+			position: absolute;
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+			-o-transform: translateX(-50%);
+			-moz-transform: translateX(-50%);
+			transform: translateX(-50%);
+		}
+		.tel_free {
+			padding-left: 0;
 		}
 	}
 }
@@ -762,13 +776,11 @@ body {
 		float: left;
 		position: static;
 		margin-bottom: 15px;
-		margin-left: 5px;
-		
+		margin-left: 5px;	
 		.brands {
 			margin-top: -7px;
 		}
 	}
-	
 }
 @media (max-width: 767px) { 
 	.menu-tel {
@@ -810,6 +822,9 @@ body {
 		font-size: 34px;
 		bottom: 40px;
 	}
+	.service_extra .bg-heading {
+		font-size: 28px;
+	}
 	.heading_dark {
 		font-size: 20px;
 	}
@@ -818,31 +833,28 @@ body {
 			margin-top: -30px;
 		}
 	}
-	/*.footer_top {
-	font-size: 17px;
-	h3 {
-		font-size: 16px;
-		margin-bottom: 18px;
-	}
-	.email {
-		padding-left: 0;
-		.email_address {	
+	.footer_top {
+		font-size: 17px;
+		h3 {
 			font-size: 16px;
+			margin-bottom: 18px;
+		}
+		.email {
+			.email_address {	
+				font-size: 14px;
+			}
+		}	
+		.tel_free {
+			padding-left: 0;
+			margin-right: -25px;	
 		}
 	}
-	.tel_footer {
-		padding-left: 0;
+	.footer_bottom .copyright {
+		text-align: left;
+		padding-top: 20px;
 	}
-	.tel_free {
-		padding-left: 0;
-	}
-	.scanner {
-		text-align: center;
-		margin-top: -45px;
-	}
-
-}*/
 }
+
 @media (max-width: 550px) { 
 	.bg-tariffs .transports {
 		.tariffs-inner {
@@ -856,7 +868,6 @@ body {
 		display: block;
 	}
 }
-
 
 @media (max-width: 460px) { 
 	.center {
@@ -888,9 +899,7 @@ body {
 	.bg-heading {
 		bottom: 70px;
 		line-height: 1.5;
-	}
-		
+	}	
 }
-@media (max-width: 900px) { 
-}
+
 

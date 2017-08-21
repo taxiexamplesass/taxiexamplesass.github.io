@@ -38,6 +38,9 @@
     position: absolute;
     left: 50%;
     top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
 
 .transport-text {
@@ -410,7 +413,8 @@ body {
     .bg-tariffs .transports .bus-text {
       text-align: left;
       top: 198px;
-      left: 595px; }
+      left: 595px;
+      width: auto; }
 
 .else-img {
   display: none;
@@ -482,60 +486,52 @@ body {
 
 /*--------------   /  ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ   -----------------*/
 /*--------------FOOTER---------------*/
-/*.footer_top {
-	background: $dark;
-	padding: 43px 0;
-	color: $gray-footer;
-	font-size: 18px;
-	h3 {
-		text-transform: uppercase;
-		font-weight: bold;
-		font-size: 17px;
-		margin-bottom: 18px;
-	}
-	.email {
-		padding-left: 34px;
-		margin-bottom: 15px;
-		.email_address {
-			color: $yellow;
-			text-decoration: underline;
-			font-size: 16px;
-		}
-	}
-	.tel_footer {
-		padding-left: 70px;
-		margin-bottom: 15px;
-	}
-	.tel_free {
-		padding-left: 30px;
-	}
-	.scanner {
-		text-align: right;
-		
-	}
+.footer_top {
+  background: #242424;
+  padding: 43px 0;
+  color: #cccccc;
+  font-size: 18px; }
+  .footer_top h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 18px; }
+  .footer_top .email {
+    padding-left: 34px;
+    margin-bottom: 15px; }
+    .footer_top .email .email_address {
+      color: #ffb401;
+      text-decoration: underline;
+      font-size: 16px; }
+  .footer_top .tel_footer {
+    padding-left: 70px;
+    margin-bottom: 15px; }
+  .footer_top .tel_free {
+    padding-left: 30px; }
+  .footer_top .scanner {
+    text-align: right; }
 
-}
 .footer_bottom {
-	background: $dark-footer;
-	padding: 27px 0;
-	color: $gray-footer;
-	.social {
-		font-size: 16px;
-	}
-	.social_icons img {
-		
-		margin-right: 7px;
-		
-	}
-	.copyright {
-		font-size: 14px;
-		text-align: right;
-		color: $text-gray;
-	}
-	
-}*/
+  background: #1a1a1a;
+  padding: 27px 0;
+  color: #cccccc; }
+  .footer_bottom .social {
+    font-size: 16px;
+    padding-top: 5px; }
+    .footer_bottom .social span {
+      margin-right: 25px; }
+    .footer_bottom .social img {
+      margin-right: 7px; }
+  .footer_bottom .copyright {
+    padding-top: 5px;
+    font-size: 14px;
+    text-align: right;
+    color: #808080; }
+
 /*--------------   /   FOOTER   ---------------*/
 @media (max-width: 1199px) {
+  .footer_top {
+    font-size: 16px; }
   .service_extra {
     background: none; } }
 
@@ -544,7 +540,24 @@ body {
     font-size: 50px; }
   .advantages {
     padding-top: 40px;
-    padding-bottom: 40px; } }
+    padding-bottom: 40px; }
+  .footer_top .tel_footer {
+    padding-left: 0; }
+    .footer_top .tel_footer h3 {
+      margin-top: 20px; }
+  .footer_top .scanner {
+    text-align: center;
+    margin-top: -60px; }
+  .footer_top .email {
+    padding-left: 0;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%); }
+  .footer_top .tel_free {
+    padding-left: 0; } }
 
 @media (max-width: 900px) {
   .bg-heading {
@@ -612,34 +625,25 @@ body {
   .bg-heading {
     font-size: 34px;
     bottom: 40px; }
+  .service_extra .bg-heading {
+    font-size: 28px; }
   .heading_dark {
     font-size: 20px; }
   .advantages .adv-content {
     margin-top: -30px; }
-  /*.footer_top {
-	font-size: 17px;
-	h3 {
-		font-size: 16px;
-		margin-bottom: 18px;
-	}
-	.email {
-		padding-left: 0;
-		.email_address {	
-			font-size: 16px;
-		}
-	}
-	.tel_footer {
-		padding-left: 0;
-	}
-	.tel_free {
-		padding-left: 0;
-	}
-	.scanner {
-		text-align: center;
-		margin-top: -45px;
-	}
-
-}*/ }
+  .footer_top {
+    font-size: 17px; }
+    .footer_top h3 {
+      font-size: 16px;
+      margin-bottom: 18px; }
+    .footer_top .email .email_address {
+      font-size: 14px; }
+    .footer_top .tel_free {
+      padding-left: 0;
+      margin-right: -25px; }
+  .footer_bottom .copyright {
+    text-align: left;
+    padding-top: 20px; } }
 
 @media (max-width: 550px) {
   .bg-tariffs .transports .tariffs-inner {
